@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Toxicity Prediction</title>
+    <style>
+        /* CSS to style the form */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 50%;
+            height: 60px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Twitter Toxicity Prediction</h1>
+    <form action="/result" method="post">
+        <!-- Use CSS classes for styling the form elements -->
+        <div class="form-group">
+            <label for="tweet">Enter the tweet:</label>
+            <!--input type="text" id="tweet" name="tweet"-->
+            <textarea id="tweet" name="tweet"></textarea>
+        </div>
+        <br>
+        <label for="classifier">Select a classifier:</label>
+        <select id="classifier" name="classifier">
+            <option value="Decision Trees">Decision Trees</option>
+            <option value="Random Forest">Random Forest</option>
+            <option value="K-NN Classifier">K-NN Classifier</option>
+            <option value="SVM">SVM</option>
+        </select>
+        <br>
+        <label for="nlp_method">Select NLP method:</label>
+        <select id="nlp_method" name="nlp_method">
+            <option value="Bag of Words">Bag of Words</option>
+            <option value="TF-IDF">TF-IDF</option>
+        </select>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
