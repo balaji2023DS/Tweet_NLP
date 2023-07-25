@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'TweetML'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_67BAB4254C044A3E8481D62598C962CE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_31DAD19D0EEA4FA38117F11B9861484D }}
