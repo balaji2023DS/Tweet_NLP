@@ -3,6 +3,9 @@ import pickle
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 import nltk
+# Download the 'stopwords' data if not already downloaded
+nltk.download('stopwords')
+nltk.download('wordnet')
 from nltk.corpus import stopwords,wordnet
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 
@@ -70,7 +73,6 @@ def result():
 
     classifier, reducer, vectorizer = load_model(classifier_name, nlp_method)
     prediction = predict_toxicity(text, classifier, reducer, vectorizer)
-
     return render_template('result.html', tweet=text, prediction=prediction)
 
 if __name__ == '__main__':
